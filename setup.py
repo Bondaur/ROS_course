@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='igsp-01',
-    maintainer_email='arkasha_maksarov@mail.ru',
+    maintainer_email='bondaur@yandex.ru',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+	'first_node = BB_lab1_pkg.first_node:main',
         ],
     },
 )
