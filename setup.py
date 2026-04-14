@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
 	'first_node = BB_lab1_pkg.first_node:main',
+	'second_node = BB_lab1_pkg.second_node:main',
         ],
     },
 )
