@@ -26,6 +26,10 @@ setup(
         'console_scripts': [
 	'first_node = BB_lab1_pkg.first_node:main',
 	'second_node = BB_lab1_pkg.second_node:main',
-        ],
+    'talker = BB_lab1_pkg.talker:main',
+    'listener = BB_lab1_pkg.listener:main',
+    'even_pub = BB_lab1_pkg.even_number_publisher:main',
+    'overflow_listener = BB_lab1_pkg.overflow_listener:main',
+    ],
     },
 )
