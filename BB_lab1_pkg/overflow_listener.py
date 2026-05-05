@@ -6,16 +6,20 @@ from std_msgs.msg import Int32
 class OverflowListener(Node):
 
     def __init__(self):
-    
+
+
         super().__init__('overflow_listener')
+
+        self.declare_parameter('topic_2_name', '/overflow')
+        self.topic = self.get_parameter('topic_2_name').value
 
         self.subscription = self.create_subscription(
             Int32,
-            'overflow',
+            self.topic,
             self.callback,
             10)
 
-        self.get_logger().info("Узел overflow_listener запущен и слушает топик overflow!")
+        self.get_logger().info(f"Узел {self.get_name()} запущен и слушает топик {self.topic}!")
 
     def callback(self, msg):
         self.get_logger().warn(f"!!! OVERFLOW DETECTED !!!: Got value {msg.data}")
