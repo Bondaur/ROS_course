@@ -11,7 +11,6 @@ class EvenPublisher(Node):
 
         super().__init__("even_pub")
 
-
         self.declare_parameter('publish_frequency', 10.0) 
         self.declare_parameter('overflow_threshold', 100)
         self.declare_parameter('topic_1_name', '/even_numbers')
